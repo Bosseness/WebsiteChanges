@@ -140,14 +140,32 @@ input, select, textarea {
 		-webkit-transition: color 0.2s ease, border-bottom-color 0.2s ease;
 		-ms-transition: color 0.2s ease, border-bottom-color 0.2s ease;
 		transition: color 0.2s ease, border-bottom-color 0.2s ease;
-		border-bottom: dotted 1px;
+		/* border-bottom: dotted 1px; */
 		color: inherit;
 		text-decoration: none;
 	}
 
 		a:hover {
 			border-bottom-color: transparent;
-		}
+			border-bottom: dotted 1px;
+			/* background: linear-gradient(to right, rgba(255, 215, 255, 0) 0%, rgba(225, 255, 255, 0.5) 20%, rgba(255, 255, 255, 0) 61%), linear-gradient(rgb(255, 255, 255) 52%, rgb(107, 180, 211) 60%, rgb(5, 226, 226) 61%); /* you can change the colors based on your preference */
+			/* background-clip: text; it defines how far the background should extend within an element, here we set it to text */
+			/* -webkit-background-clip: text; for browsers compatibility */
+			/* -webkit-text-fill-color: transparent; specifies the fill color of text characters. We use transparent to use the background as our text fill  */
+			/* animation: wave 2000ms ease alternate infinite; */
+			/* transition: all 0.4s ease; */ 
+			
+      }
+      /* @keyframes wave {
+        0% {
+          background-position: 0 0;
+        }
+        100% {
+          background-position: 50vw 10px;
+
+        }
+      } */
+		
 
 	strong, b {
 		color: #fff;
@@ -161,6 +179,9 @@ input, select, textarea {
 	p {
 		margin: 0 0 2em 0;
 	}
+	.publications_paragraph {
+    font-size: 14px;
+}
 
 	h1, h2, h3, h4, h5, h6 {
 		color: #fff;
@@ -3473,14 +3494,123 @@ input, select, textarea {
 				height: inherit;
 				line-height: inherit;
 			}
+			/* #header h1 a:hover {
+				#header h1 a em{
+						border:2px rgb(0,255,204);
+						color:rgb(0,255,204);
+					}
+				#header h1 a strong{
+						color:white;
+						
+					}
+
+			} */
 
 				@media screen and (max-width: 736px) {
 
 					#header h1 a {
 						font-size: 0.8em;
+						
 					}
+					/* #header h1 a:hover > em {
+						padding: 7px; 
+						border:2px rgb(0,255,204);
+						color:rgb(0,255,204);
+						
+					} */
+					
 
 				}
+				#header h1 a em{
+						border:2px white solid;
+						padding: 7px; 
+					}
+					#header h1 a em:hover{
+						/* padding: 7px; */
+						
+						/* border-color: rgb(0,255,204); 
+						border-top: transparent; */
+						color:rgb(0,255,204);
+
+
+						 /* transform: rotate(410deg);
+ 						 transition: linear 2s; */
+						 --angle: 0deg;
+						 border-image: linear-gradient(var(--angle), rgb(0,255,204), #2e3842) 1;
+ 						 animation: rotate 8s linear infinite;
+						
+					}
+					@keyframes rotate {
+						to {
+							--angle: 360deg;
+						}
+						}
+						@property --angle {
+						syntax: '<angle>';
+						initial-value: 0deg;
+						inherits: false;
+						}
+					/* #header h1 a em:hover #header h1 a strong{
+						color:white;
+					} */
+
+					#header h1 a strong{
+						color:rgb(0,255,204);
+					}
+					#header h1 a strong:hover{
+						color:white;
+						/* background: linear-gradient(to right, rgba(255, 215, 255, 0) 0%, rgba(225, 255, 255, 0.5) 10%, rgba(255, 255, 255, 0) 51%), linear-gradient(rgb(255, 255, 255) 42%, rgb(19, 180, 148) 50%, rgb(0,255,204) 51%); /* you can change the colors based on your preference */
+						/* background-clip: text; it defines how far the background should extend within an element, here we set it to text */
+						/* -webkit-background-clip: text; for browsers compatibility */
+						/* -webkit-text-fill-color: transparent; specifies the fill color of text characters. We use transparent to use the background as our text fill  */
+						/* animation: wave 2000ms ease alternate infinite; */
+						/* transition: all 0.4s ease; */ 
+						
+						text-transform: uppercase;
+						background-image: linear-gradient(
+							-225deg,
+							#ffffff 0%,
+							#a7b1bb 33%,
+							#4e5963 71%,
+							#2e3842 100%
+						);
+						
+						background-size: auto auto;
+						background-clip: border-box;
+						background-size: 200% auto;
+						color: #fff;
+						background-clip: text;
+						text-fill-color: transparent;
+						-webkit-background-clip: text;
+						-webkit-text-fill-color: transparent;
+						animation: textclip 2.5s linear reverse infinite;
+						/* display: inline-block; */
+						/* font-size: 15px; */
+						}
+
+						@keyframes textclip {
+						to {
+							background-position: 200% center;
+						}
+						}
+						
+					
+					/* @keyframes wave {
+						0% {
+						background-position: 0 0;
+						}
+						100% {
+						background-position: 30vw 7px;
+
+						}
+					} */
+						
+					
+					/* #header h1 a strong:hover #header h1 a em{
+						padding: 7px; 
+						border:2px rgb(0,255,204);
+						color:rgb(0,255,204);
+					} */
 
 		#header nav {
 			height: inherit;
@@ -3814,6 +3944,7 @@ input, select, textarea {
 
 	#main > header {
 		padding: 12em 0 10em 0 ;
+		/* this changes color on the side pages just change gradiance */
 		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
 		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
 		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
